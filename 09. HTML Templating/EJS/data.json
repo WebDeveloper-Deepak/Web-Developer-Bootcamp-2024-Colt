@@ -1,0 +1,44 @@
+{
+    "soccer": {
+        "name": "Soccer",
+        "subscribers": 80000,
+        "description": "The football subreddit. News, results and performance about football",
+        "posts": [
+            {
+                "title": "Marten de Roon to make pizza for more that 1000 people",
+                "author": "joeextreme"
+            },
+            {
+                "title": "Stephan Lichtsteiner has retired from proffesional career",
+                "author": "odd person"
+            },
+            {
+                "title": "Official: Dani Pajero signs for Villareal.",
+                "author": "joeextreme"
+            }
+        ]
+    },
+    "chickens": {
+        "name": "Chickens",
+        "subscribers": 23239,
+        "description": "A place to post your photos, video and questions about chickens",
+        "posts": [
+            {
+                "title": "My chicken is cool",
+                "author": "chickenmaster",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/330px-Male_and_female_chicken_sitting_together.jpg"
+            },
+            {
+                "title": "How the chickens say I love you?",
+                "author": "smartypants",
+                "img": "https://cdn.britannica.com/07/183407-050-C35648B5/Chicken.jpg"
+
+            },
+            {
+                "title": "Emanuel is practicing",
+                "author": "manuel",
+                "img": "https://www.spendwithpennies.com/wp-content/uploads/2020/05/1200-Rotisserie-Chicken-SpendWithPennies-11-500x500.jpg"
+            }
+        ]
+    }
+}
