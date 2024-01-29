@@ -1,0 +1,16 @@
+{
+  "name": "14.-data-relations-with-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Models/farm.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  }
+}
