@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 const mongoose = require('mongoose');
 const Product = require('./models/product');
@@ -27,6 +29,15 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
+const sessionOptions = { secret: 'thisisasecretmessage', resave: false, saveUninitialized: false };
+app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req, res, next) => {
+    res.locals.messages = req.flash('success');
+    next();
+});
+
 app.get('/farms', async (req, res) => {
     const farms = await Farm.find({});
     res.render('farms/index', { farms })
@@ -50,6 +61,7 @@ app.delete('/farms/:id', async (req, res) => {
 app.post('/farms', async (req, res) => {
     const farm = new Farm(req.body);
     await farm.save();
+    req.flash('success', 'Successfully made a new farm!');
     res.redirect('/farms')
 });
 
@@ -108,7 +120,7 @@ app.get('/products/:id/edit', async (req, res) => {
 app.get('/products/:id', async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id).populate('farm', 'name');
-    
+
 
     // if (!product) {
     //     next(new AppError('Product not found', 404));  
