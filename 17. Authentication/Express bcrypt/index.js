@@ -26,7 +26,7 @@ db.once('open', () => {
 });
 
 app.use(express.urlencoded({ extended: true }));
-app.use(session({secret: 'notagoodsecret'}));
+app.use(session({ secret: 'notagoodsecret' }));
 
 const requireLogin = (req, res, next) => {
     if (!req.session.user_id) {
@@ -50,12 +50,7 @@ app.get('/register', (req, res) => {
 
 app.post('/register', async (req, res) => {
     const { password, username } = req.body;
-
-    const hashPassword = await bcrypt.hash(password, 12);
-    const user = new User({
-        username,
-        password: hashPassword,
-    });
+    const user = new User({ username, password });
 
     await user.save();
     req.session.user_id = user._id;
@@ -64,9 +59,9 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    
+
     const foundUser = await User.findAndValidate(username, password)
-   
+
     if (foundUser) {
         req.session.user_id = foundUser._id;
         res.redirect('/secret')
