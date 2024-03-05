@@ -8,6 +8,8 @@ import ListPicker from './ListPicker'
 import ColorList from './ColorList'
 import ShoppingList from './ShoppingList'
 import PropertyList from './PropertyList'
+import Clicker from './Clicker'
+import Form from './Form'
 
 const data = [
     { id: 1, item: 'egg', quantity: 12, completed: false },
@@ -44,7 +46,9 @@ function App() {
 
             {/* <ShoppingList items={data}/> */}
 
-            <PropertyList properties={properties}/>
+            {/* <PropertyList properties={properties}/> */}
+            <Clicker message='Hello!' buttonText="Please click me" />
+            {/* <Form /> */}
         </div>
     )
 }
