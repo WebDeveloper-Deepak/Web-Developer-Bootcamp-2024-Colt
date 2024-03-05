@@ -12,7 +12,7 @@ export default function Clicker({ message, buttonText }) {
 
     function alertMessage() {
         alert(message)
-    }
+    };
 
     return (
         // <div>
