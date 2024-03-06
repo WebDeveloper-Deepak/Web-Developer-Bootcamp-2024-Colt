@@ -11,6 +11,9 @@ import PropertyList from './PropertyList'
 import Clicker from './Clicker'
 import Form from './Form'
 import Counter from './Counter'
+import Toggler from './Toggler'
+import ColorBox from './ColorBox'
+import ColorBoxList from './ColorBoxList'
 
 const data = [
     { id: 1, item: 'egg', quantity: 12, completed: false },
@@ -26,7 +29,22 @@ const properties = [
     {id: 129033, name: 'Cactus Retreat', rating: 4.75, price: 300},
     {id: 129034, name: 'Redwood Tree House', rating: 4.9, price: 120},
     {id: 129035, name: 'Gold miner Campground Yurt', rating: 4.69, price: 96},
-]
+];
+
+const colors = 
+    [
+        '#B8D5F0', 
+        '#9C92F3',
+        '#D5535D',
+        '#B0F53D',
+        '#680F7F',
+        '#57A04A',
+        '#A04607',
+        '#7CE788',
+        '#DDD818',
+        '#1D6DAF',
+        '#DED092'
+    ];
 
 function App() {
     return (
@@ -50,7 +68,10 @@ function App() {
             {/* <PropertyList properties={properties}/> */}
             {/* <Clicker message='Hello!' buttonText="Please click me" /> */}
             {/* <Form /> */}
-            <Counter num={1}/>
+            {/* <Counter /> */}
+            {/* <Toggler /> */}
+            <ColorBoxList colors={colors} />
+
         </div>
     )
 }

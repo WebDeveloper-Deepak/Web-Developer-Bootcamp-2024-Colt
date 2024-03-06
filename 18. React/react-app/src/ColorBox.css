@@ -1,0 +1,13 @@
+.Box {
+    width: 120px;
+    height: 120px;
+}
+
+.ColorBoxList {
+    width: 600px;
+    height: 600px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+
+}

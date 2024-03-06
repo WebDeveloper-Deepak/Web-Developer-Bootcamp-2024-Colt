@@ -1,17 +1,24 @@
 import { useState } from "react"
 
-export default function Counter({ num }) {
+export default function Counter() {
 
-    const [counter, setCounter] = useState(0);
+    const [count, setCount] = useState(0);
 
-    const increment = () => {
-        num += 1;
-    }
+    function setNum() {
+        setCount(count + 1)
+    };
 
     return (
         <div>
-            <p>The count is: {num}</p>
-            <button onClick={increment}>Increment</button>
+            <p>The count is: {count}</p>
+            <button onClick={setNum}>Increment</button>
         </div>
     )
 };
+
+
+// * This returns an array containing two elements: 
+// *  - The piece of state itself
+// *  - A function to change the piece of state
+// * The useState is called inside the component
+
