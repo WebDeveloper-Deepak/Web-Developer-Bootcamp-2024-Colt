@@ -11,8 +11,8 @@ function App() {
             <h1>State demo</h1>
             {/* <Counter /> */}
             {/* <Dumbo /> */}
-            {/* <ScoreKeeper /> */}
-            <EmojiClicker />
+            <ScoreKeeper numPlayers={10} target={3}/>
+            {/* <EmojiClicker /> */}
         </div>
     )
 }
