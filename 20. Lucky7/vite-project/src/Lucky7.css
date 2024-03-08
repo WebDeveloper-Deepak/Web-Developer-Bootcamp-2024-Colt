@@ -1,0 +1,24 @@
+.Lucky7 {
+    display: block;
+}
+
+.Lucky7-dice {
+    border: 2px solid #ccc;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    margin: 1em auto 1em auto;
+    border-radius: 10px;
+}
+
+.Lucky7-die {
+    background-color: seagreen;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    width: 3em;
+    height: 2.25em;
+    padding-top: .75em;
+    text-align: center;
+    margin-right: .5em;
+    font-weight: bold;
+}
