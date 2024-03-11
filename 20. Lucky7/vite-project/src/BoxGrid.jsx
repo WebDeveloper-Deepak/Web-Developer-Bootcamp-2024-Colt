@@ -21,7 +21,7 @@ function BoxGrid() {
             });
         });
     };
-    
+        
 
     return (
         <div className='BoxGrid'>
